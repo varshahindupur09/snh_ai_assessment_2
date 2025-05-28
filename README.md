@@ -77,5 +77,16 @@ Server will start at http://localhost:3000.
 | DELETE | `/tree/:id` | Delete a node               |
 
 
+## How to start project
+### Backend: (First start)
+cd snh_ai_assessment_2/nodejs_backend/tree-api
+npm install
+.env file: DATABASE_URL="postgresql://user:password@localhost:5432/tree_db"
+npx prisma migrate dev --name init
+npm run start:dev
 
+### Frontend: (Next this)
+cd snh_ai_assessment_2/retool-visual-ui
+npm install
+npm run dev -- -p 3001
 
