@@ -5,17 +5,17 @@
 This is the backend service for managing tree-structured data, built using **NestJS**, **Prisma**, and **PostgreSQL**. It provides RESTful endpoints for interacting with hierarchical data models.
 
 ## 📁 Project Structure
-nodejs_backend/
-└── tree-api/
-├── src/
-│ ├── tree/ # Tree module, service, controller
-│ ├── app.module.ts # Root module
-│ └── main.ts # App bootstrap
-├── prisma/
-│ └── schema.prisma # Prisma schema
-├── .env # Environment variables
-├── package.json
-└── README.md
+nodejs_backend/ <br />
+└── tree-api/ <br />
+├── src/ <br />
+│ ├── tree/ # Tree module, service, controller <br />
+│ ├── app.module.ts # Root module <br />
+│ └── main.ts # App bootstrap <br />
+├── prisma/ <br />
+│ └── schema.prisma # Prisma schema <br />
+├── .env # Environment variables <br />
+├── package.json <br />
+└── README.md <br />
 
 
 ## 🚀 Features
@@ -89,4 +89,7 @@ npm run start:dev
 cd snh_ai_assessment_2/retool-visual-ui
 npm install
 npm run dev -- -p 3001
+
+## Screenshots:
+<img width="981" alt="image" src="https://github.com/user-attachments/assets/134a00f3-46d8-449a-ae8c-5f3f3a8ee9c4" />
 
