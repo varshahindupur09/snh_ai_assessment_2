@@ -5,17 +5,17 @@
 This is the backend service for managing tree-structured data, built using **NestJS**, **Prisma**, and **PostgreSQL**. It provides RESTful endpoints for interacting with hierarchical data models.
 
 ## 📁 Project Structure
-nodejs_backend/
-└── tree-api/
-├── src/
-│ ├── tree/ # Tree module, service, controller
-│ ├── app.module.ts # Root module
-│ └── main.ts # App bootstrap
-├── prisma/
-│ └── schema.prisma # Prisma schema
-├── .env # Environment variables
-├── package.json
-└── README.md
+nodejs_backend/ <br />
+└── tree-api/ <br />
+├── src/ <br />
+│ ├── tree/ # Tree module, service, controller <br />
+│ ├── app.module.ts # Root module <br />
+│ └── main.ts # App bootstrap <br />
+├── prisma/ <br />
+│ └── schema.prisma # Prisma schema <br />
+├── .env # Environment variables <br />
+├── package.json <br />
+└── README.md <br />
 
 
 ## 🚀 Features
@@ -89,4 +89,35 @@ npm run start:dev
 cd snh_ai_assessment_2/retool-visual-ui
 npm install
 npm run dev -- -p 3001
+
+## Screenshots:
+<img width="981" alt="image" src="https://github.com/user-attachments/assets/134a00f3-46d8-449a-ae8c-5f3f3a8ee9c4" />
+
+Database:<br />
+<img width="838" alt="image" src="https://github.com/user-attachments/assets/e7adf7e0-3134-4760-b6d6-189660f9e4c7" />
+
+LLM Working Screenshot:<br />
+<img width="840" alt="image" src="https://github.com/user-attachments/assets/0a7ea8bd-9f13-414a-a50d-42340fa573b3" />
+
+<img width="783" alt="image" src="https://github.com/user-attachments/assets/c5e2e875-a58b-46cc-b1e9-88cae9c5cb5a" />
+
+## Steps to Work with NGROK
+🔐 Sign up for a free ngrok account → https://dashboard.ngrok.com/signup
+
+🔑 Get your auth token from your dashboard → https://dashboard.ngrok.com/get-started/your-authtoken
+psql -h 4.tcp.ngrok.io -p 15739 -U user -d mydatabase
+
+ngrok config add-authtoken <your_token_here>
+
+ngrok tcp 5433
+
+DATABASE_URL=postgresql://user:password@4.tcp.ngrok.io:15739/mydatabase?schema=public
+
+## Trial CURL
+
+curl -X POST http://localhost:3000/nlp/tree-query \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Show me all animals under root"}'
+
+
 
