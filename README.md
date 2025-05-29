@@ -111,5 +111,11 @@ ngrok tcp 5433
 
 DATABASE_URL=postgresql://user:password@4.tcp.ngrok.io:15739/mydatabase?schema=public
 
+## Trial CURL
+
+curl -X POST http://localhost:3000/nlp/tree-query \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Show me all animals under root"}'
+
 
 
