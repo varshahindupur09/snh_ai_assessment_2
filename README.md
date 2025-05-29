@@ -99,6 +99,8 @@ Database:<br />
 LLM Working Screenshot:<br />
 <img width="840" alt="image" src="https://github.com/user-attachments/assets/0a7ea8bd-9f13-414a-a50d-42340fa573b3" />
 
+<img width="783" alt="image" src="https://github.com/user-attachments/assets/c5e2e875-a58b-46cc-b1e9-88cae9c5cb5a" />
+
 ## Steps to Work with NGROK
 🔐 Sign up for a free ngrok account → https://dashboard.ngrok.com/signup
 
