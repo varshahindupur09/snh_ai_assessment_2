@@ -93,6 +93,23 @@ npm run dev -- -p 3001
 ## Screenshots:
 <img width="981" alt="image" src="https://github.com/user-attachments/assets/134a00f3-46d8-449a-ae8c-5f3f3a8ee9c4" />
 
-Database:
+Database:<br />
 <img width="838" alt="image" src="https://github.com/user-attachments/assets/e7adf7e0-3134-4760-b6d6-189660f9e4c7" />
+
+LLM Working Screenshot:<br />
+<img width="840" alt="image" src="https://github.com/user-attachments/assets/0a7ea8bd-9f13-414a-a50d-42340fa573b3" />
+
+## Steps to Work with NGROK
+🔐 Sign up for a free ngrok account → https://dashboard.ngrok.com/signup
+
+🔑 Get your auth token from your dashboard → https://dashboard.ngrok.com/get-started/your-authtoken
+psql -h 4.tcp.ngrok.io -p 15739 -U user -d mydatabase
+
+ngrok config add-authtoken <your_token_here>
+
+ngrok tcp 5433
+
+DATABASE_URL=postgresql://user:password@4.tcp.ngrok.io:15739/mydatabase?schema=public
+
+
 
