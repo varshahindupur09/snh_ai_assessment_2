@@ -60,3 +60,7 @@ npx create-next-app retool-visucdal-ui --typescript --tailwind
 cd retool-visual-ui
 npx shadcn-ui@latest init
 npm install @shadcn/ui react-flow-renderer
+
+## For LLM:
+npm install class-validator class-transformer
+npm install @aws-sdk/client-lambda
