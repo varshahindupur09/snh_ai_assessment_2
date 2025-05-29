@@ -93,3 +93,6 @@ npm run dev -- -p 3001
 ## Screenshots:
 <img width="981" alt="image" src="https://github.com/user-attachments/assets/134a00f3-46d8-449a-ae8c-5f3f3a8ee9c4" />
 
+Database:
+<img width="838" alt="image" src="https://github.com/user-attachments/assets/e7adf7e0-3134-4760-b6d6-189660f9e4c7" />
+
