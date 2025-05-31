@@ -81,7 +81,7 @@ Server will start at http://localhost:3000.
 cd snh_ai_assessment_2/nodejs_backend/tree-api
 npm install
 .env file: DATABASE_URL="postgresql://user:password@localhost:5432/tree_db"
-npx prisma migrate dev --name init
+npx prisma migrate dev --name init or use npx prisma generate
 npm run start:dev
 
 ### Frontend: (Next this)
@@ -125,6 +125,14 @@ curl -X POST http://localhost:3000/nlp/tree-query \
 ## LLM Integration
 
 <img width="1418" alt="image" src="https://github.com/user-attachments/assets/5cefee27-e0fb-4652-8748-e9cd6077747f" />
+
+## Cypress Automated Test
+
+(base) varshahindupur@Varshas-MacBook-Air tree-api % npx cypress run
+
+<img width="814" alt="image" src="https://github.com/user-attachments/assets/dfff5cef-5641-49be-89cb-a05f3b63e1aa" />
+
+
 
 
 
