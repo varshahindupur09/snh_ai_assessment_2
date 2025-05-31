@@ -123,5 +123,9 @@ curl -X POST http://localhost:3000/nlp/tree-query \
 
 <img width="624" alt="image" src="https://github.com/user-attachments/assets/12e56033-8ec9-4b72-a317-c9dec6b098d7" />
 
+## LLM Integration
+
+<img width="1418" alt="image" src="https://github.com/user-attachments/assets/5cefee27-e0fb-4652-8748-e9cd6077747f" />
+
 
 
