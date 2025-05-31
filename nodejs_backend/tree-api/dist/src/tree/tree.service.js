@@ -41,6 +41,18 @@ let TreeService = class TreeService {
         }
         return roots;
     }
+    async getChildrenOfParent(label) {
+        const parent = await this.prisma.treeNode.findFirst({
+            where: { label },
+        });
+        if (!parent) {
+            return { error: `No node found for label "${label}"` };
+        }
+        const children = await this.prisma.treeNode.findMany({
+            where: { parentId: parent.id },
+        });
+        return children;
+    }
 };
 exports.TreeService = TreeService;
 exports.TreeService = TreeService = __decorate([

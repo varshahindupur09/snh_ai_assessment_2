@@ -20,16 +20,20 @@ nodejs_backend/ <br />
 
 ## 🚀 Features
 
-- Create, update, and delete tree nodes
-- Retrieve nested children or entire tree structures
-- Designed for persistence with PostgreSQL
-- Built with scalable NestJS architecture
+- Create, update, delete, and query hierarchical nodes
+- Retrieve full trees or subtrees by ID
+- LLM-powered interpretation of natural language queries
+- Works with a PostgreSQL database exposed via ngrok
+- Easy integration with a frontend (e.g., Retool UI)
 
-## ⚙️ Technologies Used
+## ⚙️ Tech Stack
 
-- [NestJS](https://nestjs.com/) – Progressive Node.js framework
-- [Prisma ORM](https://www.prisma.io/) – Type-safe DB access
-- [PostgreSQL](https://www.postgresql.org/) – Relational DB
+- **[NestJS](https://nestjs.com/)** – Backend framework
+- **[Prisma](https://www.prisma.io/)** – Type-safe ORM
+- **[PostgreSQL](https://www.postgresql.org/)** – Relational DB
+- **[AWS Lambda](https://aws.amazon.com/lambda/)** – Serverless LLM execution
+- **[Bedrock](https://aws.amazon.com/bedrock/)** – LLM inference
+- **[ngrok](https://ngrok.com/)** – Secure tunnel for local DB access
 
 ## 🛠️ Setup Instructions
 
@@ -46,25 +50,27 @@ cd snh_ai_assessment_2/nodejs_backend/tree-api
 npm install
 ```
 
-### 3. Set up environment
+### 3. 🧪 Local PostgreSQL Setup (via ngrok)
+Make sure your local Postgres is running on port 5433
 
-Create a .env file containing:
+Start an ngrok tunnel:
 ```
-DATABASE_URL="postgresql://user:password@localhost:5432/tree_db"
-```
-
-### 4. Run database migrations
-
-```
-npx prisma migrate dev --name init
+ngrok tcp 5433
 ```
 
-### 5. Start the server
+Note the forwarding URL (e.g., 8.tcp.ngrok.io:10500) and update your .env:
+``` DATABASE_URL="postgresql://postgres:postgres@8.tcp.ngrok.io:10500/mydatabase" ```
+```
+npx prisma generate
+npx prisma db push
+```
 
+Start backend:
 ```
 npm run start:dev
-Server will start at http://localhost:3000.
 ```
+
+YAY!!! Application will be running at: http://localhost:3000
 
 ## API Endpoints
 
@@ -83,6 +89,7 @@ cd snh_ai_assessment_2/nodejs_backend/tree-api
 npm install
 .env file: DATABASE_URL="postgresql://user:password@localhost:5432/tree_db"
 npx prisma migrate dev --name init
+ngrok tcp 5433
 npm run start:dev
 
 ### Frontend: (Next this)

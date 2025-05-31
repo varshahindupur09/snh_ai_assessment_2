@@ -23,7 +23,7 @@ let LlmService = class LlmService {
         const payload = JSON.stringify({ prompt });
         console.log('📨 Sending prompt to Lambda:', prompt);
         const command = new client_lambda_1.InvokeCommand({
-            FunctionName: 'bedrock-nlp-query-handler',
+            FunctionName: 'bedrock-llm-lambda',
             Payload: new TextEncoder().encode(payload),
         });
         const response = await this.lambdaClient.send(command);

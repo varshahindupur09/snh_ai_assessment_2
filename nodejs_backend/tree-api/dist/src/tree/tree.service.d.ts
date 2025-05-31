@@ -9,4 +9,5 @@ export declare class TreeService {
         parentId: number | null;
     }>;
     getTree(): Promise<any[]>;
+    getChildrenOfParent(label: string): Promise<any>;
 }

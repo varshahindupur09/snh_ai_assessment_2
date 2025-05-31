@@ -1,0 +1,1 @@
+{"version":3,"file":"cypress.config.js","sourceRoot":"","sources":["../cypress.config.ts"],"names":[],"mappings":";;AACA,qCAAuC;AAEvC,kBAAe,IAAA,sBAAY,EAAC;IAC1B,SAAS,EAAE,QAAQ;IACnB,GAAG,EAAE;QACH,OAAO,EAAE,uBAAuB;QAChC,WAAW,EAAE,wBAAwB;KACtC;CACF,CAAC,CAAC"}

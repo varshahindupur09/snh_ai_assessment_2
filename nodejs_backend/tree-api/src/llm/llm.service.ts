@@ -14,7 +14,7 @@ export class LlmService {
     console.log('📨 Sending prompt to Lambda:', prompt);
 
     const command = new InvokeCommand({
-      FunctionName: 'bedrock-nlp-query-handler',
+      FunctionName: 'bedrock-llm-lambda',
       Payload: new TextEncoder().encode(payload),
     });
 
@@ -33,7 +33,7 @@ export class LlmService {
           parsed.structuredFilters.parent = 'root';
         }
 
-        // If it's comma-separated (e.g., "cat,dog,bear"), just take "root" as parent
+        // If it's comma-separated just take "root" as parent
         else if (value.includes(',')) {
           parsed.structuredFilters.parent = 'root';
         }
