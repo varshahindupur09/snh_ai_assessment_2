@@ -119,5 +119,9 @@ curl -X POST http://localhost:3000/nlp/tree-query \
   -H "Content-Type: application/json" \
   -d '{"text": "Show me all animals under root"}'
 
+## Test Cases:
+
+<img width="624" alt="image" src="https://github.com/user-attachments/assets/12e56033-8ec9-4b72-a317-c9dec6b098d7" />
+
 
 
