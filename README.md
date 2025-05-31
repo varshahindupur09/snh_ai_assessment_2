@@ -72,10 +72,9 @@ Server will start at http://localhost:3000.
 | ------ | ----------- | --------------------------- |
 | GET    | `/tree`     | Fetch entire tree           |
 | POST   | `/tree`     | Add a new node              |
-| GET    | `/tree/:id` | Get a node and its children |
-| PATCH  | `/tree/:id` | Update a node               |
-| DELETE | `/tree/:id` | Delete a node               |
 
+### Swagger
+<img width="867" alt="image" src="https://github.com/user-attachments/assets/2c01bbdc-e4da-49b7-b556-14217e6a15fc" />
 
 ## How to start project
 ### Backend: (First start)
