@@ -78,18 +78,16 @@ YAY!!! Application will be running at: http://localhost:3000
 | ------ | ----------- | --------------------------- |
 | GET    | `/tree`     | Fetch entire tree           |
 | POST   | `/tree`     | Add a new node              |
-| GET    | `/tree/:id` | Get a node and its children |
-| PATCH  | `/tree/:id` | Update a node               |
-| DELETE | `/tree/:id` | Delete a node               |
 
+### Swagger
+<img width="867" alt="image" src="https://github.com/user-attachments/assets/2c01bbdc-e4da-49b7-b556-14217e6a15fc" />
 
 ## How to start project
 ### Backend: (First start)
 cd snh_ai_assessment_2/nodejs_backend/tree-api
 npm install
 .env file: DATABASE_URL="postgresql://user:password@localhost:5432/tree_db"
-npx prisma migrate dev --name init
-ngrok tcp 5433
+npx prisma migrate dev --name init or use npx prisma generate
 npm run start:dev
 
 ### Frontend: (Next this)
@@ -125,6 +123,22 @@ DATABASE_URL=postgresql://user:password@4.tcp.ngrok.io:15739/mydatabase?schema=p
 curl -X POST http://localhost:3000/nlp/tree-query \
   -H "Content-Type: application/json" \
   -d '{"text": "Show me all animals under root"}'
+
+## Test Cases:
+
+<img width="624" alt="image" src="https://github.com/user-attachments/assets/12e56033-8ec9-4b72-a317-c9dec6b098d7" />
+
+## LLM Integration
+
+<img width="1418" alt="image" src="https://github.com/user-attachments/assets/5cefee27-e0fb-4652-8748-e9cd6077747f" />
+
+## Cypress Automated Test
+
+(base) varshahindupur@Varshas-MacBook-Air tree-api % npx cypress run
+
+<img width="814" alt="image" src="https://github.com/user-attachments/assets/dfff5cef-5641-49be-89cb-a05f3b63e1aa" />
+
+
 
 
 
